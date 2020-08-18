@@ -12,8 +12,8 @@ public class instructorTest {
 
 	@Before
 	public void setUp() throws Exception {
-		instr1 = new Instructor("Syed");
-		instr2 = new Instructor("Tan");
+		instr1 = new Instructor(null, null, 0, null, null, null);
+		instr2 = new Instructor(null, null, 0, null, null, null);
 	}
 
 	@After
@@ -38,13 +38,13 @@ public class instructorTest {
 	}
 	
 	public void viewInstructorTest() {
-		//Test if instructor list is not null but empty
+		//Test if instructor list is not null but empty.
 		assertNotNull("Test if instructor list is not null but empty", InstructorDB.instructorList);
 		
-		//Test if instructor list is empty
+		//Test if instructor list is empty.
 		assertEquals("Test if instructor list is empty", 0, InstructorDB.instructorList.size());
 		
-		//Test if size of list is 1 after adding 1 item
+		//Test if size of list is 1 after adding 1 item.
 		InstructorDB.addInstructor(instr1);
 		assertEquals("Test if size of list is 1 after adding 1 item", 1, InstructorDB.instructorList.size());
 	}
